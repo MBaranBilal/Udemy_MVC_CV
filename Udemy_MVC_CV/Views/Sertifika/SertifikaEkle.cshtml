@@ -1,0 +1,20 @@
+﻿@model Udemy_MVC_CV.Models.Entity.TblSertifikalarim
+@{
+    ViewBag.Title = "SertifikaEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3 style="color:darkorange"><b>Yeni Sertifika Ekleme Sayfası</b></h3>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.Aciklama,"", new { @class = "badge bg-danger" })
+    <br />
+    <button class="btn btn-warning">Ekle</button>
+</form>
+

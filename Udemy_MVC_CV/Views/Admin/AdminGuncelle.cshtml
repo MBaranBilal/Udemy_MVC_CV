@@ -1,0 +1,24 @@
+﻿@model Udemy_MVC_CV.Models.Entity.TblAdmin
+@{
+    ViewBag.Title = "AdminGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 style="color:darkorange"><b>Şifre Güncelleme Sayfası</b></h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Kullanıcı ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextAreaFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    @Html.Label("Şifre")
+    @Html.TextAreaFor(x => x.Sifre, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+</form>
+
+
+

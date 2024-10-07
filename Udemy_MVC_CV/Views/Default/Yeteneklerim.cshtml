@@ -1,0 +1,26 @@
+﻿@using Udemy_MVC_CV.Models.Entity
+@model List<TblYetenek>
+<div class="resume-section-content">
+    <h2 class="mb-5">Yeteneklerim</h2>
+    <div class="subheading mb-3">Programlama Dilleri ve Araçlar</div>
+    <ul class="list-inline dev-icons">
+        <li class="list-inline-item"><i class="fab fa-windows"></i></li>
+        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+        <li class="list-inline-item"><i class="fab fa-java"></i></li>
+        <li class="list-inline-item"><i class="fas fa-database"></i></li>
+    </ul>
+    <div class="subheading mb-3">Becerilerim</div>
+    <ul class="fa-ul mb-0">
+        @foreach (var item in Model)
+        {
+            <li>
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                @item.Yetenek
+            </li>
+
+        }
+    </ul>
+</div>
+

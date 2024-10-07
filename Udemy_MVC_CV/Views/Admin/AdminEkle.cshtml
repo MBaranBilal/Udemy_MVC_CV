@@ -1,0 +1,25 @@
+﻿@model Udemy_MVC_CV.Models.Entity.TblAdmin
+@{
+    ViewBag.Title = "AdminEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 style="color:darkorange"><b>Yeni Kullanıcı Ekleme Sayfası</b></h2>
+<br />
+<div class="resume-section-content">
+    <form method="post">
+        @Html.Label("Kullanıcı Adı")
+        @Html.TextBoxFor(x=>x.KullaniciAdi, new { @class = "form-control", @placeholder = "Kullanıcı adı giriniz." })
+        @Html.ValidationMessageFor(x => x.KullaniciAdi, "", new { @class = "badge bg-danger" })
+        <br />
+        @Html.Label("Şifre")
+        @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control", @placeholder = "Şifre giriniz." })
+        <br />
+        <button class="btn btn-warning">Kaydet</button>
+    </form>
+</div>
+
+
+
+

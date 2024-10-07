@@ -1,0 +1,24 @@
+﻿@model Udemy_MVC_CV.Models.Entity.TblYetenek
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h3 style="color:darkorange"><b>Yetenek Güncelleme Sayfası</b></h3>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yetenek")
+    @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Yetenek, "", new { @class = "badge bg-danger" })
+    <br />
+    @Html.Label("Oran")
+    @Html.TextBoxFor(x => x.Oran, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Oran, "", new { @class = "badge bg-danger" })
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+
+</form>

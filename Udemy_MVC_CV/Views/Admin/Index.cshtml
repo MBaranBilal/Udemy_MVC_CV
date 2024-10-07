@@ -1,0 +1,42 @@
+﻿@using Udemy_MVC_CV.Models.Entity
+@model List<TblAdmin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2><b>Admin İşlemleri</b></h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kullanıcı Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <th>@item.KullaniciAdi</th>
+            <td>
+                <a href="/Admin/AdminSil/@item.ID" class="btn btn-danger">
+                    <i class="fas fa-trash">
+                    </i>Sil
+                </a>
+            </td>
+            <td>
+                <a href="/Admin/AdminGuncelle/@item.ID" class="btn btn-warning">
+                    <i class="fas fa-pencil-alt">
+                    </i>Güncelle
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Admin/AdminEkle" class="btn btn-primary">Yeni Kullanıcı Ekle</a>
+
+

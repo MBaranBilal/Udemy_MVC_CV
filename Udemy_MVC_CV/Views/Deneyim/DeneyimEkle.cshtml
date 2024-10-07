@@ -1,0 +1,32 @@
+﻿@model Udemy_MVC_CV.Models.Entity.TblDeneyimlerim
+@{
+    ViewBag.Title = "DeneyimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2 style="color:darkorange"><b>Yeni Eğitim Ekleme Sayfası</b></h2>
+<br />
+<div class="resume-section-content">
+    <form method="post">
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control", @placeholder = "Başlık giriniz." })
+        @Html.ValidationMessageFor(x => x.Baslik, "", new { @class = "badge bg-danger" })
+        <br />
+        @Html.Label("Alt Başlık")
+        @Html.TextBoxFor(x => x.AltBaslik, new { @class = "form-control", @placeholder = "Alt Başlık giriniz." })
+        @Html.ValidationMessageFor(x => x.AltBaslik, "", new { @class = "badge bg-danger" })
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control", @placeholder = "Açıklama giriniz." })
+        @Html.ValidationMessageFor(x => x.Aciklama, "", new { @class = "badge bg-danger" })
+        <br />
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control", @placeholder = "Tarih giriniz." })
+        <br />
+
+        <button class="btn btn-warning">Kaydet</button>
+    </form>
+</div>
+
+

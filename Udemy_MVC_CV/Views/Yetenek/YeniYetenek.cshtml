@@ -1,0 +1,27 @@
+﻿@model Udemy_MVC_CV.Models.Entity.TblYetenek
+
+@{
+    ViewBag.Title = "YeniYetenek";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2 style="color:darkorange"><b>Yeni Yetenek Ekleme Sayfası</b></h2>
+<br />
+<div class="resume-section-content">
+    <form method="post">
+        @Html.Label("Yetenek")
+        @Html.TextBoxFor(x => x.Yetenek, new { @class = "form-control", @placeholder = "Eklenecek yeteneği giriniz." })
+        @Html.ValidationMessageFor(x => x.Yetenek, "", new { @class = "badge bg-danger" })
+
+        <br />
+
+        @Html.Label("Oran")
+        @Html.TextBoxFor(x => x.Oran, new { @class = "form-control", @placeholder = "Görüntülenecek yüzdeyi giriniz." })
+        @Html.ValidationMessageFor(x => x.Oran,"", new { @class = "badge bg-danger" })
+
+        <br />
+
+        <button class="btn btn-warning">Kaydet</button>
+    </form>
+</div>
+
